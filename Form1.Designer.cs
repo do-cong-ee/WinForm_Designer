@@ -34,7 +34,12 @@
             chkBold = new CheckBox();
             cboBox = new ComboBox();
             lblFont = new Label();
+            grpBar = new GroupBox();
+            pgdummy = new ProgressBar();
+            tbDummy = new TrackBar();
             GroupBox.SuspendLayout();
+            grpBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)tbDummy).BeginInit();
             SuspendLayout();
             // 
             // GroupBox
@@ -44,16 +49,16 @@
             GroupBox.Controls.Add(chkBold);
             GroupBox.Controls.Add(cboBox);
             GroupBox.Controls.Add(lblFont);
-            GroupBox.Location = new Point(53, 51);
+            GroupBox.Location = new Point(50, 22);
             GroupBox.Name = "GroupBox";
-            GroupBox.Size = new Size(680, 339);
+            GroupBox.Size = new Size(680, 205);
             GroupBox.TabIndex = 0;
             GroupBox.TabStop = false;
             GroupBox.Text = "ComboBox, CheckBox, TextBox";
             // 
             // txtSampleText
             // 
-            txtSampleText.Location = new Point(47, 181);
+            txtSampleText.Location = new Point(34, 153);
             txtSampleText.Name = "txtSampleText";
             txtSampleText.Size = new Size(591, 39);
             txtSampleText.TabIndex = 4;
@@ -101,17 +106,50 @@
             lblFont.TabIndex = 0;
             lblFont.Text = "Font";
             // 
+            // grpBar
+            // 
+            grpBar.Controls.Add(pgdummy);
+            grpBar.Controls.Add(tbDummy);
+            grpBar.Location = new Point(50, 255);
+            grpBar.Name = "grpBar";
+            grpBar.Size = new Size(680, 204);
+            grpBar.TabIndex = 5;
+            grpBar.TabStop = false;
+            grpBar.Text = "TrackBar && PrograssBar";
+            grpBar.Enter += groupBox1_Enter;
+            // 
+            // pgdummy
+            // 
+            pgdummy.Location = new Point(34, 134);
+            pgdummy.Maximum = 20;
+            pgdummy.Name = "pgdummy";
+            pgdummy.Size = new Size(577, 47);
+            pgdummy.TabIndex = 1;
+            // 
+            // tbDummy
+            // 
+            tbDummy.Location = new Point(33, 38);
+            tbDummy.Maximum = 20;
+            tbDummy.Name = "tbDummy";
+            tbDummy.Size = new Size(575, 90);
+            tbDummy.TabIndex = 0;
+            tbDummy.Scroll += tbDummy_Scroll;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(14F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 494);
+            Controls.Add(grpBar);
             Controls.Add(GroupBox);
             Name = "Form1";
             Text = "이잉기";
             Load += Form1_Load;
             GroupBox.ResumeLayout(false);
             GroupBox.PerformLayout();
+            grpBar.ResumeLayout(false);
+            grpBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)tbDummy).EndInit();
             ResumeLayout(false);
         }
 
@@ -123,5 +161,8 @@
         private Label lblFont;
         private TextBox txtSampleText;
         private CheckBox chkItalic;
+        private GroupBox grpBar;
+        private ProgressBar pgdummy;
+        private TrackBar tbDummy;
     }
 }

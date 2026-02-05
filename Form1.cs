@@ -45,5 +45,20 @@ namespace WinFormsApp2
         {
             ChangeFont();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbDummy_Scroll(object sender, EventArgs e)
+        {
+            pgdummy.Value = tbDummy.Value;
+        }
     }
 }
