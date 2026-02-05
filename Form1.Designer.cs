@@ -41,10 +41,16 @@
             btnMsgBox = new Button();
             btnModaless = new Button();
             btnModal = new Button();
+            grpTreeList = new GroupBox();
+            btnAddChild = new Button();
+            btnAddRoot = new Button();
+            lvDummy = new ListView();
+            tvDummy = new TreeView();
             GroupBox.SuspendLayout();
             grpBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)tbDummy).BeginInit();
             grpForm.SuspendLayout();
+            grpTreeList.SuspendLayout();
             SuspendLayout();
             // 
             // GroupBox
@@ -183,11 +189,61 @@
             btnModal.UseVisualStyleBackColor = true;
             btnModal.Click += btnModal_Click;
             // 
+            // grpTreeList
+            // 
+            grpTreeList.Controls.Add(btnAddChild);
+            grpTreeList.Controls.Add(btnAddRoot);
+            grpTreeList.Controls.Add(lvDummy);
+            grpTreeList.Controls.Add(tvDummy);
+            grpTreeList.Location = new Point(77, 715);
+            grpTreeList.Name = "grpTreeList";
+            grpTreeList.Size = new Size(647, 352);
+            grpTreeList.TabIndex = 7;
+            grpTreeList.TabStop = false;
+            grpTreeList.Text = "TreeView & ListView";
+            // 
+            // btnAddChild
+            // 
+            btnAddChild.Location = new Point(189, 278);
+            btnAddChild.Name = "btnAddChild";
+            btnAddChild.Size = new Size(155, 55);
+            btnAddChild.TabIndex = 3;
+            btnAddChild.Text = "자식추가";
+            btnAddChild.UseVisualStyleBackColor = true;
+            btnAddChild.Click += btnAddChild_Click;
+            // 
+            // btnAddRoot
+            // 
+            btnAddRoot.Location = new Point(21, 278);
+            btnAddRoot.Name = "btnAddRoot";
+            btnAddRoot.Size = new Size(157, 55);
+            btnAddRoot.TabIndex = 2;
+            btnAddRoot.Text = "루트 추가";
+            btnAddRoot.UseVisualStyleBackColor = true;
+            btnAddRoot.Click += btnAddRoot_Click;
+            // 
+            // lvDummy
+            // 
+            lvDummy.Location = new Point(317, 51);
+            lvDummy.Name = "lvDummy";
+            lvDummy.Size = new Size(297, 207);
+            lvDummy.TabIndex = 1;
+            lvDummy.UseCompatibleStateImageBehavior = false;
+            lvDummy.View = View.Details;
+            // 
+            // tvDummy
+            // 
+            tvDummy.Location = new Point(25, 51);
+            tvDummy.Name = "tvDummy";
+            tvDummy.Size = new Size(260, 203);
+            tvDummy.TabIndex = 0;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(14F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(775, 770);
+            ClientSize = new Size(791, 1120);
+            Controls.Add(grpTreeList);
             Controls.Add(grpForm);
             Controls.Add(grpBar);
             Controls.Add(GroupBox);
@@ -200,6 +256,7 @@
             grpBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)tbDummy).EndInit();
             grpForm.ResumeLayout(false);
+            grpTreeList.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -218,5 +275,10 @@
         private Button btnModal;
         private Button btnMsgBox;
         private Button btnModaless;
+        private GroupBox grpTreeList;
+        private Button btnAddRoot;
+        private ListView lvDummy;
+        private TreeView tvDummy;
+        private Button btnAddChild;
     }
 }
