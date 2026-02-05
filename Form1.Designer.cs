@@ -37,9 +37,14 @@
             grpBar = new GroupBox();
             pgdummy = new ProgressBar();
             tbDummy = new TrackBar();
+            grpForm = new GroupBox();
+            btnMsgBox = new Button();
+            btnModaless = new Button();
+            btnModal = new Button();
             GroupBox.SuspendLayout();
             grpBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)tbDummy).BeginInit();
+            grpForm.SuspendLayout();
             SuspendLayout();
             // 
             // GroupBox
@@ -135,11 +140,55 @@
             tbDummy.TabIndex = 0;
             tbDummy.Scroll += tbDummy_Scroll;
             // 
+            // grpForm
+            // 
+            grpForm.Controls.Add(btnMsgBox);
+            grpForm.Controls.Add(btnModaless);
+            grpForm.Controls.Add(btnModal);
+            grpForm.Location = new Point(73, 508);
+            grpForm.Name = "grpForm";
+            grpForm.Size = new Size(649, 134);
+            grpForm.TabIndex = 6;
+            grpForm.TabStop = false;
+            grpForm.Text = "Modal & Modaless";
+            grpForm.Enter += groupBox1_Enter_1;
+            // 
+            // btnMsgBox
+            // 
+            btnMsgBox.Location = new Point(359, 55);
+            btnMsgBox.Name = "btnMsgBox";
+            btnMsgBox.Size = new Size(243, 53);
+            btnMsgBox.TabIndex = 2;
+            btnMsgBox.Text = "MassageBox";
+            btnMsgBox.UseVisualStyleBackColor = true;
+            btnMsgBox.Click += btnMsgBox_Click;
+            // 
+            // btnModaless
+            // 
+            btnModaless.Location = new Point(193, 55);
+            btnModaless.Name = "btnModaless";
+            btnModaless.Size = new Size(160, 53);
+            btnModaless.TabIndex = 1;
+            btnModaless.Text = "Modaless";
+            btnModaless.UseVisualStyleBackColor = true;
+            btnModaless.Click += btnModaless_Click;
+            // 
+            // btnModal
+            // 
+            btnModal.Location = new Point(27, 55);
+            btnModal.Name = "btnModal";
+            btnModal.Size = new Size(160, 53);
+            btnModal.TabIndex = 0;
+            btnModal.Text = "Modal";
+            btnModal.UseVisualStyleBackColor = true;
+            btnModal.Click += btnModal_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(14F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 494);
+            ClientSize = new Size(775, 770);
+            Controls.Add(grpForm);
             Controls.Add(grpBar);
             Controls.Add(GroupBox);
             Name = "Form1";
@@ -150,6 +199,7 @@
             grpBar.ResumeLayout(false);
             grpBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)tbDummy).EndInit();
+            grpForm.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -164,5 +214,9 @@
         private GroupBox grpBar;
         private ProgressBar pgdummy;
         private TrackBar tbDummy;
+        private GroupBox grpForm;
+        private Button btnModal;
+        private Button btnMsgBox;
+        private Button btnModaless;
     }
 }

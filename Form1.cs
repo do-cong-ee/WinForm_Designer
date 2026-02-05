@@ -60,5 +60,46 @@ namespace WinFormsApp2
         {
             pgdummy.Value = tbDummy.Value;
         }
+
+        private void groupBox1_Enter_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnModal_Click(object sender, EventArgs e)
+        {
+            Form frm = new Form();
+            frm.Text = "Modal Form";
+            frm.Width = 300;
+            frm.Height = 100;
+            frm.BackColor = Color.Red;
+            frm.ShowDialog(); // modal Ã¢À» ¶ç¿î´Ù
+        }
+
+        private void btnModaless_Click(object sender, EventArgs e)
+        {
+            Form frm = new Form();
+            frm.Text = "Modal Form";
+            frm.Width = 300;
+            frm.Height = 100;
+            frm.BackColor = Color.Red;
+            frm.Show();//modaless Ã¢À» ¶ç¿î´Ù.
+        }
+        
+        private void btnMsgBox_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(txtSampleText.Text, "MessageBox Test", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+        }
     }
 }
